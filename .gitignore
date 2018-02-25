@@ -1,0 +1,6 @@
+main.db
+.idea/
+node_modules/
+pids
+*.pid
+*.tgz
