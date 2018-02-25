@@ -21,13 +21,15 @@ app.post('/put/:tag', (req, res) => {
 
     insert.run(timestamp, tag, JSON.stringify(content))
 
-    res.send({'time': timestamp})
+    res.json({'time': timestamp})
 })
 
 app.get('/get/:tag/:from/:to', (req, res) => {
     let tag = req.params.tag
     let from = req.params.from
     let to = req.params.to
+
+    res.header('Content-Type', 'application/x-ndjson')
 
     select.each(from, to, tag, (err, row) => {
         let data = {
