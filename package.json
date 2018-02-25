@@ -1,6 +1,6 @@
 {
   "name": "timus",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Timus Time Series Data Server",
   "main": "server.js",
   "scripts": {
